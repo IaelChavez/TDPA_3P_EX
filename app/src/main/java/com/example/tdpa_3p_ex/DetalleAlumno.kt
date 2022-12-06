@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.tdpa_3p_ex.databinding.ActivityDetalleAlumnoBinding
 import com.example.tdpa_3p_ex.databinding.ActivityListaBinding
+import com.squareup.picasso.Picasso
 
 class DetalleAlumno : AppCompatActivity() {
 
@@ -28,6 +29,8 @@ class DetalleAlumno : AppCompatActivity() {
 
         val resultado1 = 10 - suma!!
         val resultado2 = 6 - suma!!
+
+        Picasso.get().load("https://picsum.photos/id/${id}/200/300").into(binding.imageContainer);
 
         binding.txtID.text = "ID: ${id}"
         binding.txtName.text = "Nombre: ${nombre}"
